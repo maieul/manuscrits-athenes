@@ -4,17 +4,20 @@ min = 1
 max = 39
 romain = True
 i = min
+extension = ".gif"
+dossier="435"
+# les imports
 import urllib.request
 import roman
 while i <= max:
     try:   
         if romain:
-            url = base + roman.toRoman(i).lower()+".gif"
+            url = base + roman.toRoman(i).lower()+extenstion
         else:
-            url = base + str(i).zfill(3)+".gif"
+            url = base + str(i).zfill(3)+extension
         print (url)
         http = urllib.request.urlopen(url)
-        file = open("435/"+str(i).zfill(3)+".gif","wb")
+        file = open(dossier+"/"+str(i).zfill(3)+extension,"wb")
         file.write(http.read())
         file.close()
     except:
