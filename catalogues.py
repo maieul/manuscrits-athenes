@@ -1,18 +1,18 @@
 #les paramètres
 base="http://xeir.nlg.gr/images/15/"
-min = 1
-max = 39
+min = 2
+max = 11
 romain = True
 i = min
 extension = ".gif"
-dossier="435"
+dossier="430"
 # les imports
 import urllib.request
 import roman
 while i <= max:
     try:   
         if romain:
-            url = base + roman.toRoman(i).lower()+extenstion
+            url = base + roman.toRoman(i).lower()+extension
         else:
             url = base + str(i).zfill(3)+extension
         print (url)
