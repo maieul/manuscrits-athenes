@@ -1,11 +1,11 @@
 #les paramètres
-base="http://xeir.nlg.gr/images/1/"
+base="http://xeir.nlg.gr/images/11/"
 min = 1
-max = 11
+max = 6
 romain = True
 i = min
 extension = ".gif"
-dossier="430"
+dossier="437"
 # les imports
 import urllib.request
 import roman
@@ -17,10 +17,12 @@ while i <= max:
         else:
             url = base + str(i).zfill(3)+extension
             name = str(i).zfill(3)
+        fichier =  dossier+"/"+name+extension
+        print (fichier)
         print (url)
-        print (name)
+        
         http = urllib.request.urlopen(url)
-        file = open(dossier+"/"+name+extension,"wb")
+        file = open(fichier,"wb")
         file.write(http.read())
         file.close()
     except:
