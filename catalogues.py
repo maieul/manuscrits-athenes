@@ -1,22 +1,26 @@
 #les paramètres
-base="http://www.corgialenios.gr/files/medium/7/48547ep_{nombre}_KAT_{nombre}.pdf"
-extension = ".pdf"
-min = 156
-max = 196
+base="http://babel.hathitrust.org/cgi/imgsrv/image?id=mdp.39015012425404;seq={nombre}"
+extension = ".jpg"
+min = 1
+max = 776
 romain = False
-i = min
-dossier="2490"
+
+dossier="Schlumberger1884"
+complete = 0
 # les imports
 import urllib.request
 import roman
+
+# le code
+i = min
 while i <= max:
     try:   
         if romain:
             url = base.format(nombre=roman.toRoman(i).lower)
             name = roman.toRoman(i).lower()
         else:
-            url = base.format(nombre=str(i).zfill(3))
-            name = str(i).zfill(3)
+            url = base.format(nombre=str(i).zfill(complete))
+            name = str(i).zfill(len(str(max)))
         fichier =  dossier+"/"+name+extension
         print (fichier)
         print (url)
