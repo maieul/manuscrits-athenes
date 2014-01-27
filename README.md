@@ -1,4 +1,5 @@
-manuscrits-athenes
+recuperation-images-livre
 ==================
 
-Récupération d'images en ligne de catalogue de manuscrits athéniens
+Outils pour récupérer facilement l'ensemble des images d'un livre ancien 
+lorsque ces images sont mis en ligne une par une.
