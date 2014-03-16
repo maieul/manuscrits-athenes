@@ -29,7 +29,7 @@ while i <= max:
         else:
             url = base.format(nombre=str(i).zfill(complete))
             name = str(i).zfill(len(str(max)))
-        fichier =  dossier+"/"+name+extension
+        fichier =  os.path.join(dossier,name+extension)
         print (fichier)
         print (url)
         
