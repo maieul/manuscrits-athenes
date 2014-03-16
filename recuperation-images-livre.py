@@ -2,7 +2,7 @@
 base="http://babel.hathitrust.org/cgi/imgsrv/image?id=mdp.39015012425404;seq={nombre}"
 extension = ".jpg"
 min = 1
-max = 776
+max = 2
 romain = False
 
 dossier="Schlumberger1884"
@@ -10,8 +10,16 @@ complete = 0
 # les imports
 import urllib.request
 import roman
-
+import os
 # le code
+
+## création du dossier
+try:
+    os.mkdir(dossier)
+except:
+    pass
+
+## récupération de chaques images
 i = min
 while i <= max:
     try:   
