@@ -1,3 +1,13 @@
+"""
+Maïeul Rouquette - 2013/2014
+Version 1.0
+
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GPL 3 license, available at
+https://www.gnu.org/licenses/gpl.html
+"""
+
 # les imports
 from config import *
 import urllib.request
