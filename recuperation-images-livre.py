@@ -21,7 +21,7 @@ try:
 except:
     pass
 
-## récupération de chaques images
+## récupération de chaque image
 i = min
 while i <= max:
     try:   
