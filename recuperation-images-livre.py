@@ -1,6 +1,6 @@
 """
-Maïeul Rouquette - 2013/2014
-Version 1.0
+Maïeul Rouquette - 2013…
+Version 1.1
 
 
 This program is free software; you can redistribute it and/or modify
@@ -24,7 +24,7 @@ except:
 ## récupération de chaque image
 i = min
 while i <= max:
-    try:   
+    try:
         if romain:
             url = base.format(nombre=roman.toRoman(i).lower)
             name = roman.toRoman(i).lower()
@@ -34,11 +34,11 @@ while i <= max:
         fichier =  os.path.join(dossier,name+extension)
         print (fichier)
         print (url)
-        
+
         http = urllib.request.urlopen(url)
         file = open(fichier,"wb")
         file.write(http.read())
         file.close()
     except:
         pass
-    i = i + 1
+    i = i + pas
